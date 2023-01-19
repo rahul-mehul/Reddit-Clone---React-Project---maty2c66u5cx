@@ -16,7 +16,7 @@ function Post() {
                 <p className='para'>Lorem Ipsum is simply dummy text of the printing and typesetting industry </p>
                 <button onClick={upFunc}>👍</button>
                 <button onClick={downFunc1}>👎</button>
-                <div>
+                <div className='para'>
                     <span>{upvote}</span>|
                     <span>{downvote}</span>
                 </div>
