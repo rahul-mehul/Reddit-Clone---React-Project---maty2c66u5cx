@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+const newPost = localStorage.getItem("posts");
+
 function Post() {
 
     const [upvote, setUpvate] = useState(0);
@@ -8,15 +10,16 @@ function Post() {
     return (
         <div>
 
-            <div className='home'>
-                <p className='para'>Lorem Ipsum is simply dummy text of the printing and typesetting industry </p>
-                <button onClick={() => setUpvate(upvote + 1)}>👍</button>
-                <button onClick={() => setDownvote(downvote + 1)}>👎</button>
-                <div className='para'>
-                    <span>{upvote}</span>|
-                    <span>{downvote}</span>
+            <div className='post-display'>
+                <p className='post-text'> {newPost} </p>
+                <div className='btn-vote'>
+                    <button onClick={() => setUpvate(upvote + 1)}>👍</button>
+                    <button onClick={() => setDownvote(downvote + 1)}>👎</button><br />
+
+                    <span className='upvote'>{upvote}</span>|
+                    <span className='downvote'>{downvote}</span>
                 </div>
-            </div>
+            </div>|
 
         </div>
     )

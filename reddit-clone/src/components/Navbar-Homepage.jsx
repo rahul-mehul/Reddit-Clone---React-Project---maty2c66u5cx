@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { LoginForm } from "./LoginForm";
 
 function NavbarHomepage() {
-    // POSTSAVE FUNCTION LOCALSTORAGE
+    // POST SAVE FUNCTION LOCALSTORAGE
     const [postText, setPostText] = useState("");
     const [posts, setPosts] = useState([]);
     function savePost(e) {
@@ -24,6 +23,10 @@ function NavbarHomepage() {
     function closePop() {
         setPopup(false);
     };
+    function removePost() {
+        setPostText("")
+
+    }
 
 
     return (
@@ -37,24 +40,24 @@ function NavbarHomepage() {
                 </div>
             </div>
 
-            <LoginForm />
             <form onSubmit={savePost}>
                 {popup ?
 
-                    <div className='main-1'>
-                        <div className="popup">
+                    <div className='main-post'>
+                        <div className="popup-post">
                             <div className="popup-header">
                                 <p>Add new post</p>
                                 <p className='x' onClick={closePop}>❌</p>
                             </div>
                             <div className='popup-title'>
                                 <label htmlFor="">Post title</label> <br></br>
-                                <textarea name="post" id="post" cols="43" value={postText}
+                                <textarea name="post" id="post" value={postText}
                                     onChange={(e) => setPostText(e.target.value)} ></textarea>
                             </div><br></br>
-                            <div className="popup-btn">
-                                <button className='btn-close'>Remove</button> <br></br>
+                            <div className="post-btn">
                                 <button className='btn-save' >Save</button>
+                                <button className='btn-remove' onClick={removePost}>Remove</button> <br></br>
+
                             </div>
                         </div>
                     </div> : ""}
