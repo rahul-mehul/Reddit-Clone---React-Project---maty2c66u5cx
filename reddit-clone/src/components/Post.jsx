@@ -12,6 +12,7 @@ function Post() {
     }
     return (
         <div>
+
             <div className='home'>
                 <p className='para'>Lorem Ipsum is simply dummy text of the printing and typesetting industry </p>
                 <button onClick={upFunc}>👍</button>

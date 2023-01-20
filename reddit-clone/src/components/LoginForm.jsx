@@ -1,21 +1,30 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [allEntry, setAllEntry] = useState([]);
+
     function submitForm(e) {
         e.preventDefault();
-        const newEntry = { email: email, password: password };
+        const newEntry = { email, password };
         setAllEntry([...allEntry, newEntry]);
-        console.log(newEntry);
         console.log(allEntry);
+        setEmail("");
+        setPassword("");
     };
+    // Local Storage
+    useEffect(() => {
+        localStorage.setItem('allEntry', JSON.stringify(allEntry))
+    }, [allEntry])
+
+    // for pop function 
 
     const [popup, setPopup] = useState(false);
     function closePop() {
         setPopup(false);
     };
+
     function logInPopup() {
         setPopup(!popup);
     }
@@ -23,7 +32,7 @@ export function LoginForm() {
 
     return (
         <div>
-            <button className='btnLog' onClick={logInPopup}>Log in</button>
+            <button action="" className='btnLog' onClick={logInPopup}>Log in</button>
             {popup ?
                 <form action='' onSubmit={submitForm}>
                     <div className='main'>
