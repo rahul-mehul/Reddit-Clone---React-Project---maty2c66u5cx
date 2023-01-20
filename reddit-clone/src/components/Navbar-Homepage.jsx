@@ -53,7 +53,7 @@ function NavbarHomepage() {
                                     onChange={(e) => setPostText(e.target.value)} ></textarea>
                             </div><br></br>
                             <div className="popup-btn">
-                                <button className='btn-close' onClick={closePop}>Close</button> <br></br>
+                                <button className='btn-close'>Remove</button> <br></br>
                                 <button className='btn-save' >Save</button>
                             </div>
                         </div>

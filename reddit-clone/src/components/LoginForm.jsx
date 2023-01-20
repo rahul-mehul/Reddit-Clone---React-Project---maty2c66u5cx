@@ -4,12 +4,13 @@ export function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [allEntry, setAllEntry] = useState([]);
+    // const userName = localStorage.getItem('email') ? localStorage.getItem('email') : 'admin@adm.com';
 
     function submitForm(e) {
         e.preventDefault();
         const newEntry = { email, password };
         setAllEntry([...allEntry, newEntry]);
-        console.log(allEntry);
+        // console.log(allEntry);
         setEmail("");
         setPassword("");
     };
@@ -43,13 +44,13 @@ export function LoginForm() {
                             </div>
                             <div className='email-password'>
                                 <div >
-                                    <label htmlFor="email">Email </label><br></br>
-                                    <input type="email" name="email" id="email" value={email} placeholder='Your Email Address' autoComplete='off' onChange={(e) => setEmail(e.target.value)} />
+                                    <label htmlFor="email">Username </label><br></br>
+                                    <input type="text" name="email" id="email" value={email} placeholder='Enter username' autoComplete='off' onChange={(e) => setEmail(e.target.value)} />
                                 </div>
 
                                 <div>
                                     <label htmlFor="password">Password</label><br></br>
-                                    <input type="password" name="password" id="password" value={password} placeholder='Your Password' autoComplete='off' onChange={(e) => setPassword(e.target.value)} />
+                                    <input type="password" name="password" id="password" value={password} placeholder='Enter Password' autoComplete='off' onChange={(e) => setPassword(e.target.value)} />
                                 </div>
                             </div>
                             <div>
