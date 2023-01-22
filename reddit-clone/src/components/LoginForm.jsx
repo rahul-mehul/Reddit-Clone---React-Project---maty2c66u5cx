@@ -8,11 +8,15 @@ export function LoginForm() {
 
     function submitForm(e) {
         e.preventDefault();
-        const newEntry = { email, password };
-        setAllEntry([...allEntry, newEntry]);
-        // console.log(allEntry);
-        setEmail("");
-        setPassword("");
+        if (email && password) {
+            const newEntry = { id: new Date().getTime().toLocaleString(), email, password };
+            setAllEntry([...allEntry, newEntry]);
+            // console.log(allEntry);
+            setEmail("");
+            setPassword("");
+        } else {
+            alert("plz fill email & password")
+        }
     };
 
     useEffect(() => {
@@ -59,6 +63,7 @@ export function LoginForm() {
                         </div>
                     </div>
                 </form> : ""}
+
         </div>
     )
 }

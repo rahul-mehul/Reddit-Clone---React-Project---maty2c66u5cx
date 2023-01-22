@@ -1,0 +1,14 @@
+.Main {
+    flex: 1;
+    background-image: url("https://images.unsplash.com/photo-1669666770544-1fc8b126766c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+    background-size: cover;
+    background-color: #e5f5e5;
+    /* padding: 10px 40px; */
+}
+
+.Main>hr {
+
+    margin: 2em 0;
+    border: 1px solid #f4f5fa;
+
+}

@@ -1,22 +1,28 @@
 import './App.css';
-import { Homepage } from './components/Homepage';
+import SideNavbar from './components/SideNavbar';
+import { Main } from './components/Main';
+// import Header from './components/Header';
 
-const App = () => {
-  // const posts = [
-  //   {
-  //     postedBy: "Kunal",
-  //     postText:
-  //       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-  //     upVotes: 3,
-  //     downVotes: 1
-  //   },
-  // ]
-
+function App() {
   return (
-    <div>
-      <Homepage />
+    <div className='container'>
+      <SideNavbar />
+      <Main />
     </div>
   );
 }
 
 export default App;
+// import './App.css';
+// import { Homepage } from './components/Homepage';
+
+// const App = () => {
+
+//   return (
+//     <div>
+//       <Homepage />
+//     </div>
+//   );
+// }
+
+// export default App;

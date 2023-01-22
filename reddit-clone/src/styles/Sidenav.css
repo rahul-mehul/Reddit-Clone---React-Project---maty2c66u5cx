@@ -1,0 +1,109 @@
+.sideNav {
+    width: 200px;
+    font-size: small;
+    box-shadow: 2px 0px 1px 1px #dedede;
+    background-color: rgb(243, 220, 144);
+
+}
+
+.sideNav__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideNav__logo>img {
+    width: 60%;
+    margin: 10px 0px;
+}
+
+.sideNav__search {
+    margin: 2em 0;
+}
+
+.sideNav__search>input {
+    padding: 8px 10px;
+    border: 1px solid #f4f5fa;
+    box-shadow: 0px 2px #f4f5fa;
+    border-radius: 0 50px 50px 0;
+    /* position: relative; */
+    outline-width: 0;
+}
+
+.sideNav__search>i {
+    position: relative;
+    right: 30px;
+}
+
+.sideNav ul {
+    list-style: none;
+}
+
+.sideNav a {
+    text-decoration: none;
+    color: #808080;
+
+}
+
+.sideNav a:hover {
+
+    color: orangered;
+
+}
+
+.sideNav__link li {
+    padding: 10px 15px;
+}
+
+.sideNav hr {
+    margin: 2em 0;
+    border: 1px solid #f4f5fa;
+}
+
+.main-logIn {
+    /* background-color: orangered; */
+    background-image: url("https://images.unsplash.com/photo-1616509091215-57bbece93654?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+
+}
+
+.popup-logIn {
+    height: 180px;
+    width: 400px;
+    background-color: #fff;
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    box-shadow: 2px 2px #aaa;
+    border-radius: 10px;
+
+}
+
+.btnLog {
+    background-color: orangered;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    margin: 20px 50px;
+}
+
+.email-password {
+    margin: 0 10px;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 15px;
+    color: dimgrey;
+    /* border-bottom: 2px solid black; */
+}
+
+.x {
+    cursor: pointer;
+}
