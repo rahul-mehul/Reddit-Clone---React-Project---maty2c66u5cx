@@ -90,10 +90,17 @@
     border: none;
     border-radius: 10px;
     margin: 20px 50px;
+    /* outline: none; */
 }
 
 .email-password {
     margin: 0 10px;
+    color: #aaa;
+}
+
+.email-password>input {
+    outline: #aaa;
+    color: #808080;
 }
 
 .popup-header {

@@ -37,7 +37,7 @@ export function LoginForm() {
 
     return (
         <div>
-            <button action="" className='btnLog' onClick={logInPopup}>Log in</button>
+            <button action="" className='btnLog' onClick={logInPopup}>Signup</button>
             {popup ?
                 <form action='' onSubmit={submitForm}>
                     <div className='main-logIn'>
@@ -56,8 +56,10 @@ export function LoginForm() {
                                     <label htmlFor="password">Password</label><br></br>
                                     <input type="password" name="password" id="password" value={password} placeholder='Enter Password' autoComplete='off' onChange={(e) => setPassword(e.target.value)} />
                                 </div>
+                                <small>Forgot Password</small>
                             </div>
                             <div>
+
                                 <button className='btnLog'>Create Account</button>
                             </div>
                         </div>

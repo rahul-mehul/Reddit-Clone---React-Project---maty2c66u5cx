@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import '../styles/post.css';
+import ShowPostInUi from "./ShowPostInUi";
 
 function Post() {
-
-    const [upvote, setUpvote] = useState(0);
-    const [downvote, setDownvote] = useState(0);
 
     // POST SAVE FUNCTION LOCALSTORAGE
     const [postText, setPostText] = useState("");
@@ -17,7 +15,7 @@ function Post() {
             setPosts([...posts, newpost])
             setPostText("");
         } else {
-            alert("plz fill the data");
+            alert("plz fill the Post");
         }
     }
     useEffect(() => {
@@ -36,9 +34,17 @@ function Post() {
     };
     function removePost() {
         setPostText("")
-
     }
 
+    function deletePost(id) {
+        console.log('Delete')
+        setPosts((oldpost) => {
+            return oldpost.filter((ele, index) => {
+                return index !== id
+            })
+
+        })
+    }
 
     return (
         <>
@@ -67,23 +73,14 @@ function Post() {
                         </div>
                     </div> : ""}
             </form>
-            {posts.map((ele) =>
-            // const {id,postText,postedBy} =ele;
-            (<div className='post-display' key={ele.id}>
+            {posts.map((ele, ind) =>
+                <ShowPostInUi
+                    text={ele.postText}
+                    key={ind}
+                    id={ind}
+                    functionHandler={deletePost} />
 
-                <p className='post-text'> {ele.postText}<span>{ele.postedBy} </span> </p>
-
-                <div className='btn-vote'>
-                    <button onClick={() => setUpvote(upvote + 1)}  >👍</button>
-                    <button onClick={() => setDownvote(downvote + 1)}  >👎</button><br />
-
-                    <span className='upvote'>{upvote}</span>|
-                    <span className='downvote'>{downvote}</span>
-
-                    {/* <button onClick={deleteFunc}>Delete</button> */}
-                </div>
-            </div>
-            ))}
+            )}
 
         </>
     );

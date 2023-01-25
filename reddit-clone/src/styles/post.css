@@ -86,7 +86,9 @@
 .post-display {
     background-color: #fff;
     margin: 0px 70px;
+    font-family: cursive;
     color: grey;
+
     /* box-shadow: 5px 5px #aaa; */
 
 
@@ -99,15 +101,18 @@
 }
 
 .upvote {
-    padding: 10px;
-    color: black;
+    padding: 5px;
+    color: green;
     font-size: 12px;
+    font-weight: bold;
 }
 
 .downvote {
-    padding: 10px;
-    color: black;
+    padding: 5px;
+    color: red;
     font-size: 12px;
+    font-weight: bold;
+
 }
 
 @media (max-width:768px) {

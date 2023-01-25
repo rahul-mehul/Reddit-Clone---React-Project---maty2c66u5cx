@@ -2,11 +2,11 @@ import React from 'react'
 import '../styles/header.css'
 
 
-function Header() {
+function Header(props) {
     const headerBar = [
         { to: '/r/popupar', text: 'Popular' },
         { to: '/r/hot', text: 'Home' },
-        { to: '/r/rising', text: 'About us' },
+        { to: '/r/rising', text: 'Aboutus' },
         { to: '/r/controversial', text: 'Controversial' },
         { to: '/r/gilded', text: 'Gilded' }
     ]
@@ -18,7 +18,10 @@ function Header() {
                 <ul>
                     {
                         headerBar.map((ele) => <li><a href={ele.to}  >{ele.text}</a></li>
-                        )}
+                        )
+                    }
+                    <li onClick={props.login}><h4 style={{ color: "green", cursor: "pointer" }
+                    }>{props.status ? "Logout" : "Login"}</h4></li>
                 </ul>
             </div>
 
